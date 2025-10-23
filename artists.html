@@ -8,45 +8,66 @@
 </head>
 <body>
   <header class="nav">
-    <div class="nav__brand">
-      <img src="assets/img/room234-logo.png" alt="Room 234 Logo" class="logo">
-      <span class="brand">Room 234</span>
+    <div class="container nav__inner">
+      <div class="nav__brand">
+        <img src="assets/img/room234-logo.png" alt="Room 234 Logo" class="logo">
+        <span class="brand">Room 234</span>
+      </div>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="artists.html" class="active">Artists</a>
+        <a href="events.html">Events</a>
+        <a href="studio.html">Studio</a>
+        <a href="community.html">Community</a>
+        <a href="contact.html" class="btn btn--gold">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">☰ Menu</button>
     </div>
-    <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="artists.html" class="active">Artists</a>
-      <a href="events.html">Events</a>
-      <a href="studio.html">Studio</a>
-      <a href="community.html">Community</a>
-      <a href="contact.html" class="btn btn--gold">Contact</a>
-    </nav>
   </header>
 
-  <main class="page">
-    <h1>Artists</h1>
-    <p class="lede">Afrofusion and diaspora voices building a global sound.</p>
+  <main class="container section">
+    <h2>Artists</h2>
+    <p class="sub">Emerging diaspora voices, export-ready sound.</p>
 
-    <section class="artist-card">
-      <img src="assets/img/kb-portrait.jpg" alt="Kb" class="artist-card__img">
-      <div>
-        <h2>Kb</h2>
-        <p>UK-based Afrofusion — blending Afrobeat rhythm with R&B and soul. EP “KB Tha Loverboy” out now.</p>
-        <p>
-          <a class="btn btn--primary" target="_blank" href="https://distrokid.com/hyperfollow/kb95/kb-tha-loverboy-ep/">Listen</a>
-          <a class="btn btn--ghost" target="_blank" href="https://instagram.com/kbgrm">Instagram</a>
-        </p>
-      </div>
+    <section class="artist-grid">
+      <!-- ARTIST CARD EXAMPLE: KB -->
+      <article class="artist-card">
+        <img class="artist-photo" src="assets/img/kb-portrait.jpg" alt="Kb portrait">
+        <div class="artist-meta">
+          <div class="artist-name">Kb</div>
+          <div class="artist-tag">Afrofusion • R&B • Afro Swing</div>
+          <p class="artist-bio">
+            Port Harcourt-born, UK-based. Story-driven Afrofusion that blends soulful melodies with global rhythm.
+            Debut EP “KB Tha Loverboy” out now.
+          </p>
+          <div class="artist-socials">
+            <a href="https://instagram.com/kbgrm" target="_blank">IG</a>
+            <a href="https://tiktok.com/@kboffcl" target="_blank">TikTok</a>
+            <a href="https://x.com/kboffcl" target="_blank">X</a>
+            <a href="https://youtube.com/@kbgrm" target="_blank">YT</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Duplicate cards here for future artists -->
+      <!--
+      <article class="artist-card">...</article>
+      -->
     </section>
   </main>
 
-  <footer class="footer">
-    <div><img src="assets/img/room234-logo.png" class="logo--sm" alt=""></div>
+  <footer class="footer container">
+    <div>
+      <img src="assets/img/room234-logo-mono.png" alt="Room 234" class="logo--sm">
+    </div>
     <div class="footer__links">
       <a href="https://instagram.com/room.234_" target="_blank">Instagram</a>
       <a href="mailto:room234uk@gmail.com">room234uk@gmail.com</a>
       <span>London • Port Harcourt</span>
     </div>
-    <div class="tiny">© Room 234.</div>
+    <div class="tiny">© Room 234. A Room Kulture Group initiative.</div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

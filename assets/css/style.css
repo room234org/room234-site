@@ -1,11 +1,15 @@
-/* ==============
-   ROOM 234 — Neo Afro Gen-Z Theme
-   ============== */
+/* =========================
+   ROOM 234 — Neo Afro Global Theme (v2)
+   Headings: Bricolage Grotesque
+   Body: Inter
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root{
   --ink:#0E0E0E;
   --bg:#0A0A0A;
-  --card:#101114CC;         /* glass card bg */
+  --card:#101114CC;      /* glass card bg */
   --muted:#B8BBC6;
   --gold:#D2A428;
   --purple:#8147FF;
@@ -13,20 +17,25 @@
   --rose:#FF4D9A;
   --off:#F7F7F5;
   --border:rgba(255,255,255,.12);
+
+  /* layout helpers */
+  --radius-lg:16px;
+  --radius-md:12px;
+  --radius-sm:10px;
 }
 
 /* RESET */
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
 body{
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--off);
   background: var(--bg);
-  line-height:1.55;
+  line-height:1.6;
   -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
 }
 
-/* Afro textile pattern (subtle) + animated gradient aura */
+/* Afro textile aura + subtle pattern */
 body::before{
   content:"";
   position:fixed; inset:0; z-index:-2;
@@ -37,20 +46,27 @@ body::before{
     #0A0A0A;
   filter:saturate(115%);
 }
-
-/* textile overlay: faint geometric motif */
 body::after{
   content:"";
   position:fixed; inset:0; z-index:-1; pointer-events:none;
-  opacity:.07;
+  opacity:.08;
   background-image:
     linear-gradient(135deg, transparent 46%, rgba(255,255,255,.08) 47%, rgba(255,255,255,.08) 53%, transparent 54%),
     linear-gradient(45deg, transparent 46%, rgba(255,255,255,.06) 47%, rgba(255,255,255,.06) 53%, transparent 54%);
   background-size: 28px 28px, 28px 28px;
 }
 
-/* UTIL */
-.container{ max-width:1200px; margin:0 auto; padding:0 20px; }
+/* Typography */
+h1,h2,h3,h4{
+  font-family: "Bricolage Grotesque", Inter, system-ui, sans-serif;
+  letter-spacing:.2px;
+}
+p{ margin:0 0 10px; color:#D9DDE7 }
+
+/* Shared */
+.container{ max-width:1200px; margin:0 auto; padding:0 20px }
+a{ color:var(--off); text-decoration:none; }
+a:hover{ opacity:.9 }
 
 /* NAV */
 .nav{
@@ -65,37 +81,34 @@ body::after{
 }
 .logo{ height:32px; display:block }
 .brand{ font-weight:800; letter-spacing:.3px; font-size:15px; margin-left:10px; }
-
 .nav__brand{ display:flex; align-items:center; gap:10px; }
 .nav__links a{
-  color:var(--off); text-decoration:none; opacity:.9; margin:0 10px; font-weight:600;
+  color:var(--off); opacity:.9; margin:0 10px; font-weight:600;
 }
 .nav__links a:hover{ opacity:1 }
 .btn{
   display:inline-flex; align-items:center; justify-content:center;
-  padding:10px 14px; border-radius:10px; border:1px solid var(--border);
+  padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border);
   background: #12131A; color:var(--off); font-weight:700;
 }
 .btn--gold{ border-color:transparent; background:linear-gradient(90deg, var(--gold), #f3c452); color:#111; }
+.btn--primary{ background:linear-gradient(90deg, var(--purple), #9155ff); border-color:transparent }
 .btn--ghost{ background:transparent; border-color:var(--border) }
 
-/* MOBILE MENU */
 .menu-toggle{ display:none; }
 @media (max-width: 980px){
   .nav__links{ display:none }
   .menu-toggle{ display:inline-flex; gap:8px; align-items:center; color:var(--off); }
   .nav.open .nav__links{
     display:flex; position:absolute; left:20px; right:20px; top:66px; z-index:60;
-    flex-direction:column; background:rgba(16,17,20,.92);
+    flex-direction:column; background:rgba(16,17,20,.95);
     border:1px solid var(--border); border-radius:12px; padding:14px;
   }
   .nav.open .nav__links a{ padding:12px; border-radius:8px; }
 }
 
 /* HERO */
-.hero{
-  padding:46px 0 22px;
-}
+.hero{ padding:46px 0 24px; }
 .hero__wrap{
   display:grid; grid-template-columns: 1.2fr 1fr; gap:28px; align-items:center;
 }
@@ -106,29 +119,29 @@ body::after{
 .hero h1{
   font-size: clamp(34px, 5vw, 56px);
   line-height:1.04; margin:10px 0 8px;
-  font-weight:900;
+  font-weight:800;
   background: linear-gradient(92deg, #fff, #FFE07A, #B892FF, #7AF8E6);
   -webkit-background-clip:text; background-clip:text; color:transparent;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,.28));
 }
-.hero .lede{ color:#D9DDE7; opacity:.95; font-size:18px; max-width:56ch }
+.hero .lede{ color:#D7DAE3; opacity:.95; font-size:18px; max-width:56ch }
 .cta-row{ margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; }
 .hero__art img{
-  width:100%; border-radius:16px;
+  width:100%; border-radius:var(--radius-lg);
   box-shadow: 0 14px 40px rgba(0,0,0,.35), 0 0 0 1px var(--border) inset;
 }
 
-/* SECTION CARDS */
+/* GRID CARDS */
 .grid{ display:grid; gap:16px; padding:26px 0; }
 .grid--3{ grid-template-columns: repeat(3, 1fr); }
 .card{
   background: var(--card);
   border:1px solid var(--border);
-  padding:18px; border-radius:16px;
+  padding:18px; border-radius:var(--radius-lg);
   box-shadow: 0 6px 24px rgba(0,0,0,.22);
 }
-.card h3{ margin:6px 0 6px; font-size:18px }
-.card p{ color:#C9CDD7; margin:0 0 10px }
+.card h3{ margin:6px 0 6px; font-size:20px; font-weight:800 }
+.card p{ color:#C9CDD7; }
 .card__link{ color:var(--electric); font-weight:700; }
 
 /* FEATURE (EP) */
@@ -136,13 +149,100 @@ body::after{
   display:grid; grid-template-columns: 1fr 1fr; gap:24px; padding:16px 0 34px;
   align-items:center;
 }
-.feature__text h2{ margin:0 0 6px; font-size:28px; font-weight:900 }
-.feature__text p{ color:#D7DAE3; }
+.feature__text h2{ margin:0 0 6px; font-size:28px; font-weight:800 }
 .feature__art img{
-  width:100%; border-radius:14px;
+  width:100%; border-radius:var(--radius-md);
   box-shadow: 0 10px 34px rgba(0,0,0,.28), 0 0 0 1px var(--border) inset;
 }
 .embed-row{ margin:12px 0 16px }
+
+/* ARTIST GRID (Reusable) */
+.artist-grid{
+  display:grid; gap:18px;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  padding:12px 0 34px;
+}
+@media (max-width: 980px){ .artist-grid{ grid-template-columns: 1fr; } }
+.artist-card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow:hidden;
+  position:relative;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.artist-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 60px rgba(0,0,0,.35);
+}
+.artist-photo{
+  width:100%;
+  aspect-ratio: 4 / 3;          /* Keeps portraits proportional */
+  object-fit: cover;
+  display:block;
+}
+.artist-meta{ padding:14px }
+.artist-name{ font-family:"Bricolage Grotesque", Inter, sans-serif; font-size:20px; font-weight:800 }
+.artist-tag{ color:#C6C9D4; font-size:13px; margin-top:2px }
+.artist-bio{ color:#D5D8E2; font-size:14px; margin-top:8px }
+.artist-socials{
+  display:flex; gap:10px; margin-top:12px;
+}
+.artist-socials a{
+  background:#15161D; border:1px solid var(--border); padding:6px 10px; border-radius:8px;
+  font-weight:700; font-size:13px; color:#E6E9F2;
+}
+
+/* EVENTS GRID */
+.events-grid{
+  display:grid; gap:18px;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  padding:12px 0 34px;
+}
+@media (max-width: 980px){ .events-grid{ grid-template-columns: 1fr; } }
+.event-card{
+  background: var(--card);
+  border:1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow:hidden; position:relative;
+}
+.event-media{
+  width:100%; aspect-ratio: 16 / 9; object-fit: cover; display:block;
+}
+.event-body{ padding:14px }
+.date-pill{
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(210,164,40,.18);
+  border:1px solid rgba(210,164,40,.4);
+  color:#FFE9AE; padding:6px 10px; border-radius:999px;
+  font-weight:800; font-size:12px; letter-spacing:.02em;
+}
+.event-title{ font-size:18px; font-weight:800; margin:10px 0 4px }
+.event-meta{ color:#C8CBD6; font-size:13px }
+.event-cta{
+  margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;
+}
+.btn--ticket{
+  background:linear-gradient(90deg, var(--electric), #65ffe7);
+  color:#06110E; border:none; font-weight:900;
+}
+
+/* SECTIONS */
+.section{ padding:28px 0 }
+.section h2{ font-size:28px; font-weight:800; margin:0 0 8px }
+.section .sub{ color:#C9CDD7; }
+
+/* FORMS (Studio/Contact) */
+.form{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:var(--radius-lg); padding:18px;
+}
+label{ display:block; font-weight:700; margin-top:10px; margin-bottom:6px }
+input,textarea{
+  width:100%; background:#12131A; border:1px solid var(--border); color:#fff;
+  border-radius:10px; padding:10px 12px; outline:none;
+}
+textarea{ min-height:120px }
 
 /* FOOTER */
 .footer{
@@ -152,6 +252,7 @@ body::after{
 .footer__links{ display:flex; gap:14px; align-items:center; color:var(--muted) }
 .logo--sm{ height:26px; opacity:.9 }
 
+/* Responsive */
 @media (max-width: 980px){
   .hero__wrap{ grid-template-columns: 1fr; }
   .grid--3{ grid-template-columns: 1fr; }

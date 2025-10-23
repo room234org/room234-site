@@ -8,45 +8,68 @@
 </head>
 <body>
   <header class="nav">
-    <div class="nav__brand">
-      <img src="assets/img/room234-logo.png" alt="Room 234 Logo" class="logo">
-      <span class="brand">Room 234</span>
+    <div class="container nav__inner">
+      <div class="nav__brand">
+        <img src="assets/img/room234-logo.png" alt="Room 234 Logo" class="logo">
+        <span class="brand">Room 234</span>
+      </div>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="studio.html">Studio</a>
+        <a href="community.html">Community</a>
+        <a href="contact.html" class="btn btn--gold">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">☰ Menu</button>
     </div>
-    <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="artists.html">Artists</a>
-      <a href="events.html" class="active">Events</a>
-      <a href="studio.html">Studio</a>
-      <a href="community.html">Community</a>
-      <a href="contact.html" class="btn btn--gold">Contact</a>
-    </nav>
   </header>
 
-  <main class="page">
-    <h1>Events</h1>
-    <p class="lede">Listening parties, showcases, and culture-first nights.</p>
+  <main class="container section">
+    <h2>Events</h2>
+    <p class="sub">Listening parties, showcases, and global collabs.</p>
 
-    <article class="card">
-      <h3>KB Tha Loverboy — Listening Party</h3>
-      <p>VBO Lounge, Enfield • 25 Oct • 8PM</p>
-      <p><a class="btn btn--primary" target="_blank" href="https://kbthaloverboy.eventbrite.co.uk">RSVP on Eventbrite</a></p>
-    </article>
+    <section class="events-grid">
+      <!-- Event 1 -->
+      <article class="event-card">
+        <img class="event-media" src="assets/img/event-vbo.jpg" alt="VBO Lounge event">
+        <div class="event-body">
+          <span class="date-pill">Fri • 25 Oct • 8PM</span>
+          <div class="event-title">KB Tha Loverboy — Listening Party</div>
+          <div class="event-meta">VBO Lounge, Enfield • Afrofusion, Soul & R&B • Live performance + DJ set</div>
+          <div class="event-cta">
+            <a class="btn btn--ticket" href="https://kbthaloverboy.eventbrite.co.uk" target="_blank">Get Tickets</a>
+          </div>
+        </div>
+      </article>
 
-    <article class="card">
-      <h3>Room 234 Launch — Coming Soon</h3>
-      <p>London & Port Harcourt • TBA</p>
-      <p><a class="card__link" href="contact.html">Partner with us →</a></p>
-    </article>
+      <!-- Event 2 (example) -->
+      <article class="event-card">
+        <img class="event-media" src="assets/img/event-junction1ten.jpg" alt="Junction1ten event">
+        <div class="event-body">
+          <span class="date-pill">Sat • 8 Nov • 10PM</span>
+          <div class="event-title">Room 234 Night — Junction1ten</div>
+          <div class="event-meta">Croydon • Afrobeats, Afrofusion, Global Club • Showcase + DJ lineup</div>
+          <div class="event-cta">
+            <a class="btn btn--ticket" href="#" target="_blank">Get Tickets</a>
+          </div>
+        </div>
+      </article>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div><img src="assets/img/room234-logo.png" class="logo--sm" alt=""></div>
+  <footer class="footer container">
+    <div>
+      <img src="assets/img/room234-logo-mono.png" alt="Room 234" class="logo--sm">
+    </div>
     <div class="footer__links">
       <a href="https://instagram.com/room.234_" target="_blank">Instagram</a>
       <a href="mailto:room234uk@gmail.com">room234uk@gmail.com</a>
       <span>London • Port Harcourt</span>
     </div>
-    <div class="tiny">© Room 234.</div>
+    <div class="tiny">© Room 234. A Room Kulture Group initiative.</div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

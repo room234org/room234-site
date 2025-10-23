@@ -8,43 +8,54 @@
 </head>
 <body>
   <header class="nav">
-    <div class="nav__brand">
-      <img src="assets/img/room234-logo.png" alt="Room 234 Logo" class="logo">
-      <span class="brand">Room 234</span>
+    <div class="container nav__inner">
+      <div class="nav__brand">
+        <img src="assets/img/room234-logo.png" alt="Room 234 Logo" class="logo">
+        <span class="brand">Room 234</span>
+      </div>
+      <nav class="nav__links">
+        <a href="index.html">Home</a>
+        <a href="artists.html">Artists</a>
+        <a href="events.html">Events</a>
+        <a href="studio.html" class="active">Studio</a>
+        <a href="community.html">Community</a>
+        <a href="contact.html" class="btn btn--gold">Contact</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">☰ Menu</button>
     </div>
-    <nav class="nav__links">
-      <a href="index.html">Home</a>
-      <a href="artists.html">Artists</a>
-      <a href="events.html">Events</a>
-      <a href="studio.html" class="active">Studio</a>
-      <a href="community.html">Community</a>
-      <a href="contact.html" class="btn btn--gold">Contact</a>
-    </nav>
   </header>
 
-  <main class="page">
-    <h1>Studio</h1>
-    <p class="lede">Recording, mixing & mastering — open to Room 234 artists and external bookings.</p>
+  <main class="container section">
+    <h2>Studio</h2>
+    <p class="sub">London-based recording, mixing & mastering with on-site producer. Open to Room 234 artists and external bookings.</p>
 
-    <form action="https://formspree.io/f/yourFormID" method="POST" class="card">
-      <label>Full name</label>
-      <input name="name" required />
-      <label>Email</label>
-      <input name="email" type="email" required />
-      <label>Request details</label>
-      <textarea name="message" rows="5" required></textarea>
-      <button class="btn btn--gold" type="submit">Request booking</button>
-    </form>
+    <div class="form" style="margin-top:16px;">
+      <form action="https://formspree.io/f/yourFormID" method="POST">
+        <label>Full name</label>
+        <input name="name" required />
+        <label>Email</label>
+        <input name="email" type="email" required />
+        <label>What do you need?</label>
+        <textarea name="message" rows="6" placeholder="Recording, mixing, mastering. Preferred dates & times."></textarea>
+        <div style="margin-top:12px;">
+          <button class="btn btn--gold" type="submit">Request booking</button>
+        </div>
+      </form>
+    </div>
   </main>
 
-  <footer class="footer">
-    <div><img src="assets/img/room234-logo.png" class="logo--sm" alt=""></div>
+  <footer class="footer container">
+    <div>
+      <img src="assets/img/room234-logo-mono.png" alt="Room 234" class="logo--sm">
+    </div>
     <div class="footer__links">
       <a href="https://instagram.com/room.234_" target="_blank">Instagram</a>
       <a href="mailto:room234uk@gmail.com">room234uk@gmail.com</a>
       <span>London • Port Harcourt</span>
     </div>
-    <div class="tiny">© Room 234.</div>
+    <div class="tiny">© Room 234. A Room Kulture Group initiative.</div>
   </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
