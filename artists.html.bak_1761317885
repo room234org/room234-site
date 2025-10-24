@@ -3,19 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Events — Room 234</title>
+  <title>Artists — Room 234</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<section style="padding:20px">
-  <img class="mic-deco" src="assets/img/room234-micshot.svg" alt="Gold microphone symbolizing Afro music performance.">
-  <h2 style="color:#fff">Event Highlights</h2>
-  <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap:14px;">
-    <img src="assets/img/event-gallery-1.svg" alt="Room 234 Event Highlights 1" style="width:100%"/>
-    <img src="assets/img/event-gallery-2.svg" alt="Room 234 Event Highlights 2" style="width:100%"/>
-    <img src="assets/img/event-gallery-3.svg" alt="Room 234 Event Highlights 3" style="width:100%"/>
-  </div>
-</section>
   <header class="nav">
     <div class="container nav__inner">
       <div class="nav__brand">
@@ -24,8 +15,8 @@
       </div>
       <nav class="nav__links">
         <a href="index.html">Home</a>
-        <a href="artists.html">Artists</a>
-        <a href="events.html" class="active">Events</a>
+        <a href="artists.html" class="active">Artists</a>
+        <a href="events.html">Events</a>
         <a href="studio.html">Studio</a>
         <a href="community.html">Community</a>
         <a href="contact.html" class="btn btn--gold">Contact</a>
@@ -35,35 +26,33 @@
   </header>
 
   <main class="container section">
-    <h2>Events</h2>
-    <p class="sub">Listening parties, showcases, and global collabs.</p>
+    <h2>Artists</h2>
+    <p class="sub">Emerging diaspora voices, export-ready sound.</p>
 
-    <section class="events-grid">
-      <!-- Event 1 -->
-      <article class="event-card">
-        <img class="event-media" src="assets/img/event-vbo.jpg" alt="VBO Lounge event">
-        <div class="event-body">
-          <span class="date-pill">Fri • 25 Oct • 8PM</span>
-          <div class="event-title">KB Tha Loverboy — Listening Party</div>
-          <div class="event-meta">VBO Lounge, Enfield • Afrofusion, Soul & R&B • Live performance + DJ set</div>
-          <div class="event-cta">
-            <a class="btn btn--ticket" href="https://kbthaloverboy.eventbrite.co.uk" target="_blank">Get Tickets</a>
+    <section class="artist-grid">
+      <!-- ARTIST CARD EXAMPLE: KB -->
+      <article class="artist-card">
+        <img class="artist-photo" src="assets/img/kb-portrait.jpg" alt="Kb portrait">
+        <div class="artist-meta">
+          <div class="artist-name">Kb</div>
+          <div class="artist-tag">Afrofusion • R&B • Afro Swing</div>
+          <p class="artist-bio">
+            Port Harcourt-born, UK-based. Story-driven Afrofusion that blends soulful melodies with global rhythm.
+            Debut EP “KB Tha Loverboy” out now.
+          </p>
+          <div class="artist-socials">
+            <a href="https://instagram.com/kbgrm" target="_blank">IG</a>
+            <a href="https://tiktok.com/@kboffcl" target="_blank">TikTok</a>
+            <a href="https://x.com/kboffcl" target="_blank">X</a>
+            <a href="https://youtube.com/@kbgrm" target="_blank">YT</a>
           </div>
         </div>
       </article>
 
-      <!-- Event 2 (example) -->
-      <article class="event-card">
-        <img class="event-media" src="assets/img/event-junction1ten.jpg" alt="Junction1ten event">
-        <div class="event-body">
-          <span class="date-pill">Sat • 8 Nov • 10PM</span>
-          <div class="event-title">Room 234 Night — Junction1ten</div>
-          <div class="event-meta">Croydon • Afrobeats, Afrofusion, Global Club • Showcase + DJ lineup</div>
-          <div class="event-cta">
-            <a class="btn btn--ticket" href="#" target="_blank">Get Tickets</a>
-          </div>
-        </div>
-      </article>
+      <!-- Duplicate cards here for future artists -->
+      <!--
+      <article class="artist-card">...</article>
+      -->
     </section>
   </main>
 

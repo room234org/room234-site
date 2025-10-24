@@ -1,0 +1,32 @@
+<svg viewBox="0 0 1440 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121212"/>
+      <stop offset="100%" stop-color="#1F1F1F"/>
+    </linearGradient>
+    <radialGradient id="stage" cx="0.35" cy="0.28" r="0.6">
+      <stop offset="0%" stop-color="#FF9A1F" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#D27F1E" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#121212" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="weave" width="26" height="26" patternUnits="userSpaceOnUse">
+      <path d="M0,13 L26,13 M13,0 L13,26" stroke="#D2A428" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g1)"/>
+  <rect width="100%" height="100%" fill="url(#stage)"/>
+  <rect width="100%" height="100%" fill="url(#weave)" opacity="0.25"/>
+  <!-- silhouettes hinting KB / Dr. Adaku / Parkito -->
+  <g opacity="0.9" fill="#000">
+    <circle cx="300" cy="260" r="42"/>
+    <rect x="250" y="300" width="120" height="150" rx="20"/>
+    <circle cx="540" cy="230" r="38"/>
+    <rect x="500" y="270" width="110" height="150" rx="18"/>
+    <circle cx="820" cy="255" r="40"/>
+    <rect x="780" y="295" width="120" height="150" rx="20"/>
+  </g>
+  <!-- abstract crowd -->
+  <g opacity="0.35" fill="#000">
+    <rect x="0" y="540" width="1440" height="180"/>
+  </g>
+</svg>

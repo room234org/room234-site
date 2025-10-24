@@ -7,15 +7,6 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<section style="padding:20px">
-  <img class="mic-deco" src="assets/img/room234-micshot.svg" alt="Gold microphone symbolizing Afro music performance.">
-  <h2 style="color:#fff">Event Highlights</h2>
-  <div class="grid" style="grid-template-columns: repeat(3, 1fr); gap:14px;">
-    <img src="assets/img/event-gallery-1.svg" alt="Room 234 Event Highlights 1" style="width:100%"/>
-    <img src="assets/img/event-gallery-2.svg" alt="Room 234 Event Highlights 2" style="width:100%"/>
-    <img src="assets/img/event-gallery-3.svg" alt="Room 234 Event Highlights 3" style="width:100%"/>
-  </div>
-</section>
   <header class="nav">
     <div class="container nav__inner">
       <div class="nav__brand">

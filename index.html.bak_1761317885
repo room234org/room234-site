@@ -33,19 +33,6 @@
       <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">☰ Menu</button>
     </div>
   </header>
-<section class="hero--banner">
-  <img src="assets/img/vbo-event-banner.svg" alt="VBO Lounge Listening Party Banner – Room 234 Event.">
-  <div class="overlay">
-    <h2>KB Tha Loverboy Listening Party</h2>
-    <p>VBO Lounge, Enfield • Fri 25 Oct • 8PM</p>
-    <a class="btn btn--gold" href="https://kbthaloverboy.eventbrite.co.uk" target="_blank">Get Tickets</a>
-  </div>
-</section>
-<div class="section-divider"></div>
-<section class="cta-bg">
-  <h3>Room 234 — Where Afro Creativity Meets the World</h3>
-  <p>Label • Events • Community. A 360° platform connecting African diaspora talent to global audiences.</p>
-</section>
 
   <!-- HERO -->
   <section class="hero">

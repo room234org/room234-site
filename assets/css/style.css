@@ -290,3 +290,39 @@ textarea{ min-height:120px }
 .embeds{ margin-top:8px }
 .embed-panel{ display:none }
 .embed-panel.show{ display:block }
+cat >> assets/css/style.css <<'EOF'
+
+/* --- Room 234 AfroLux Additions --- */
+.section-divider{
+  width:100%; height:32px; background:url('assets/img/afro-pattern-divider.svg') center/cover no-repeat;
+  margin:24px 0;
+}
+.artist-grid{
+  background:url('assets/img/artist-grid-bg.svg') center/contain repeat;
+  padding:20px; border-radius:12px; border:1px solid #232323;
+}
+.footer{
+  position:relative; background:#111; border-top:none;
+}
+.footer:before{
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:url('assets/img/room234-footer-bg.svg') center/cover no-repeat;
+  opacity:1;
+}
+.hero--banner{
+  position:relative; overflow:hidden;
+  border-radius:12px; border:1px solid #2a2a2a; margin:16px 20px;
+}
+.hero--banner img{ width:100%; display:block; }
+.hero--banner .overlay{
+  position:absolute; right:5%; top:16%; max-width:40ch; color:#fff;
+}
+.hero--banner .overlay h2{ margin:0 0 8px; font-size:clamp(22px,3.2vw,40px); }
+.hero--banner .overlay p{ margin:0 0 12px; opacity:.9; }
+.mic-deco{
+  width:160px; height:auto; display:block;
+}
+.cta-bg{
+  background:url('assets/img/room234-cta-bg.svg') center/cover no-repeat;
+  border:1px solid #2a2a2a; border-radius:10px; padding:24px; color:#fff; margin:24px 20px;
+}

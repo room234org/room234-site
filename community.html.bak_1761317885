@@ -7,13 +7,6 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<section class="hero--banner" style="margin-top:16px">
-  <img src="assets/img/community-collab.svg" alt="Room 234 Creative Community and Collaborations"/>
-  <div class="overlay">
-    <h2>Community & Partnerships</h2>
-    <p>Universities, brands, media & grants — building culture through collaboration.</p>
-  </div>
-</section>
   <header class="nav">
     <div class="container nav__inner">
       <div class="nav__brand">
