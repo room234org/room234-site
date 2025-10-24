@@ -326,3 +326,16 @@ cat >> assets/css/style.css <<'EOF'
   background:url('assets/img/room234-cta-bg.svg') center/cover no-repeat;
   border:1px solid #2a2a2a; border-radius:10px; padding:24px; color:#fff; margin:24px 20px;
 }
+
+/* === KB Tha Loverboy EP Showcase === */
+.ep-showcase {
+  display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+  background:linear-gradient(135deg,#141414,#0c0c0c);
+  border-top:2px solid #D2A428; border-bottom:2px solid #D2A428;
+  padding:40px 20px; gap:40px; color:#fff;
+}
+.ep-cover-wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:40px;}
+.ep-cover{max-width:320px;width:100%;border-radius:10px;box-shadow:0 0 30px rgba(210,164,40,.3);}
+.ep-info h2{font-size:clamp(22px,3vw,36px);margin-bottom:10px;color:#D2A428;}
+.ep-info p{max-width:400px;opacity:.9;margin-bottom:16px;}
+.ep-links a.btn{margin-right:8px;margin-bottom:8px;display:inline-block;}
